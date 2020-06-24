@@ -3,7 +3,7 @@ package com.coy.pay.route.adapter.dto.base;
 import java.io.Serializable;
 
 /**
- * 支付查询出参
+ * 支付出参
  *
  * @author chenck
  * @date 2018/4/10 21:50

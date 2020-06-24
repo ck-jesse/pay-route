@@ -52,7 +52,7 @@ public class PayApiStrategyFactory {
      * @author chenck
      * @date 2018/8/23 19:39
      */
-    public static void loadStrategyClass() {
+    private static void loadStrategyClass() {
         // 获取策略接口下所有子类Class
         List<Class> strategyClassList = ClassUtil.getAllSubClass(PayApiStrategy.class);
 
@@ -78,7 +78,7 @@ public class PayApiStrategyFactory {
         }
     }
 
-    public static String getKey(String payPassId, String apiId) {
+    private static String getKey(String payPassId, String apiId) {
         return payPassId + DELIMITER + apiId;
     }
 

@@ -12,7 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 第三方支付api统一调用入口
+ * 支付路由 - 第三方支付api统一调用入口
  *
  * @author chenck
  * @date 2018/8/23 20:33
