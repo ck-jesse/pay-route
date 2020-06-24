@@ -19,7 +19,7 @@ import java.lang.annotation.Target;
 public @interface ThirdPayApiAnno {
 
     /**
-     * 支付通道类型(支持配置多个支付通道对应同一个适配器协议)
+     * 支付通道类型(支持配置多个支付通道对应同一个策略)
      *
      * @return
      * @author chenck

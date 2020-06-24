@@ -11,13 +11,13 @@ import com.coy.pay.route.sdk.kalian.dto.KalianRefundQueryResult;
 import com.coy.pay.route.sdk.kalian.support.KalianPayApiSupport;
 
 /**
- * 【适配器】退款查询
+ * 退款查询
  *
  * @author yehl
  * @date 2018/8/24 19:06
  */
 @ThirdPayApiAnno(payPassId = PayPassIdEnum.KALIAN, apiId = CustomApiIdEnum.TRADE_REFUND_QUERY)
-public class KalianRefundQueryAdapter extends AbstractKalianPayApiAdapter<RefundQueryInput, RefundQueryResult> {
+public class KalianRefundQueryStrategy extends AbstractKalianPayApiStrategy<RefundQueryInput, RefundQueryResult> {
 
     @Override
     public RefundQueryResult call(RefundQueryInput input) {

@@ -9,6 +9,7 @@ out/
 
 .idea/
 */.idea/
+/.idea
 
 .settings/
 */.settings/
@@ -26,6 +27,7 @@ target/
 
 *.iml
 */*.iml
+/*.iml
 
 *.log
 *.log.*

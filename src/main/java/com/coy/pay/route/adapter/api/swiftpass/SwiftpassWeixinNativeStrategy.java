@@ -14,13 +14,13 @@ import com.coy.pay.route.util.DateUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 【适配器】【微信】扫码支付
+ * 【微信】扫码支付
  *
  * @author chenck
  * @date 2018/8/23 14:38
  */
 @ThirdPayApiAnno(payPassId = {PayPassIdEnum.SWIFTPASS, PayPassIdEnum.SWT_CIB, PayPassIdEnum.SWT_SPDB}, apiId = CustomApiIdEnum.PAY_WEIXIN_NATIVE)
-public class SwiftpassWeixinNativeAdapter extends AbstractSwiftpassPayApiAdapter<WeixinNativeInput, WeixinNativeResult> {
+public class SwiftpassWeixinNativeStrategy extends AbstractSwiftpassPayApiStrategy<WeixinNativeInput, WeixinNativeResult> {
 
     @Override
     public WeixinNativeResult call(WeixinNativeInput input) {

@@ -18,20 +18,6 @@
     </properties>
 
     <dependencies>
-       <!-- &lt;!&ndash; 通用基础dto &ndash;&gt;
-        <dependency>
-            <groupId>com.ck.platform</groupId>
-            <artifactId>common-dto</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        &lt;!&ndash; 通用工具包 &ndash;&gt;
-        <dependency>
-            <groupId>com.ck.platform</groupId>
-            <artifactId>common-util</artifactId>
-            <version>1.0.0</version>
-        </dependency>-->
-
         <!-- httpclient -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -103,4 +89,54 @@
             <version>4.11</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <!-- 编译打包 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+            <!-- 要将源码放上去，需要加入这个插件 -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- 该插件的作用是用于复制指定的文件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+
+            <!-- 打包时跳过测试 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

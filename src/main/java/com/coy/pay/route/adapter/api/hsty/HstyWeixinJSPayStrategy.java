@@ -20,13 +20,13 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.IOException;
 
 /**
- * 【适配器】【汇商通盈】【微信】公众号&小程序支付 预支付
+ * 【汇商通盈】【微信】公众号&小程序支付 预支付
  *
  * @author chenck
  * @date 2018/8/23 14:38
  */
 @ThirdPayApiAnno(payPassId = PayPassIdEnum.HSTYPAY, apiId = CustomApiIdEnum.PAY_WEIXIN_JSPAY)
-public class HstyWeixinJSPayAdapter extends AbstractHstyPayApiAdapter<WeixinJSPayInput, WeixinJSPayResult> {
+public class HstyWeixinJSPayStrategy extends AbstractHstyPayApiStrategy<WeixinJSPayInput, WeixinJSPayResult> {
 
     @Override
     public WeixinJSPayResult call(WeixinJSPayInput input) {

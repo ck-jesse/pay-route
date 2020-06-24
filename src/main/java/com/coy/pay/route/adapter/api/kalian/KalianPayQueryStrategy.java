@@ -11,12 +11,12 @@ import com.coy.pay.route.adapter.type.PayPassIdEnum;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 【适配器】交易查询
+ * 交易查询
  * @author yehl
  * @date 2018/8/24 19:06
  */
 @ThirdPayApiAnno(payPassId = PayPassIdEnum.KALIAN, apiId = CustomApiIdEnum.TRADE_QUERY)
-public class KalianPayQueryAdapter extends AbstractKalianPayApiAdapter<PayQueryInput, PayQueryResult> {
+public class KalianPayQueryStrategy extends AbstractKalianPayApiStrategy<PayQueryInput, PayQueryResult> {
 
     @Override
     public PayQueryResult call(PayQueryInput input) {

@@ -16,13 +16,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 【适配器】【微信】公众号&小程序支付 预支付
+ * 【微信】公众号&小程序支付 预支付
  *
  * @author yehl
  * @date 2018/8/24 18:54
  */
 @ThirdPayApiAnno(payPassId = PayPassIdEnum.KALIAN, apiId = CustomApiIdEnum.PAY_WEIXIN_JSPAY)
-public class KalianWeixinJSPayAdapter extends AbstractKalianPayApiAdapter<WeixinJSPayInput, WeixinJSPayResult> {
+public class KalianWeixinJSPayStrategy extends AbstractKalianPayApiStrategy<WeixinJSPayInput, WeixinJSPayResult> {
 
     @Override
     public WeixinJSPayResult call(WeixinJSPayInput input) {

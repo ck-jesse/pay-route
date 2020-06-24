@@ -1,6 +1,6 @@
 package com.coy.pay.route.adapter.api.swiftpass;
 
-import com.coy.pay.route.adapter.api.PayApiAdapter;
+import com.coy.pay.route.adapter.api.PayApiStrategy;
 import com.coy.pay.route.adapter.consts.PayConstants;
 import com.coy.pay.route.adapter.dto.base.PayApiInput;
 import com.coy.pay.route.sdk.swiftpass.SwiftpassPayApiInput;
@@ -12,12 +12,12 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.Date;
 
 /**
- * 【威富通】抽象适配器
+ * 【威富通】抽象策略
  *
  * @author chenck
  * @date 2018/8/23 13:53
  */
-public abstract class AbstractSwiftpassPayApiAdapter<T extends PayApiInput<R>, R extends PayApiResult> implements PayApiAdapter<T, R> {
+public abstract class AbstractSwiftpassPayApiStrategy<T extends PayApiInput<R>, R extends PayApiResult> implements PayApiStrategy<T, R> {
 
     /**
      * 公众参数设置

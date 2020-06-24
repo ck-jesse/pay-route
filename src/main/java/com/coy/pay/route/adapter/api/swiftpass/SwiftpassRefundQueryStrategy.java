@@ -13,13 +13,13 @@ import com.coy.pay.route.exception.PayApiError;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 【适配器】退款查询
+ * 退款查询
  *
  * @author chenck
  * @date 2018/8/23 14:38
  */
 @ThirdPayApiAnno(payPassId = {PayPassIdEnum.SWIFTPASS, PayPassIdEnum.SWT_CIB, PayPassIdEnum.SWT_SPDB}, apiId = CustomApiIdEnum.TRADE_REFUND_QUERY)
-public class SwiftpassRefundQueryAdapter extends AbstractSwiftpassPayApiAdapter<RefundQueryInput, RefundQueryResult> {
+public class SwiftpassRefundQueryStrategy extends AbstractSwiftpassPayApiStrategy<RefundQueryInput, RefundQueryResult> {
 
     @Override
     public RefundQueryResult call(RefundQueryInput input) {

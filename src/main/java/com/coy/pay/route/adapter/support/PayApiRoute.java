@@ -1,6 +1,6 @@
 package com.coy.pay.route.adapter.support;
 
-import com.coy.pay.route.adapter.api.PayApiAdapter;
+import com.coy.pay.route.adapter.api.PayApiStrategy;
 import com.coy.pay.route.adapter.dto.base.PayApiInput;
 import com.coy.pay.route.adapter.type.CustomApiIdEnum;
 import com.coy.pay.route.adapter.dto.base.PayApiResult;
@@ -37,10 +37,10 @@ public class PayApiRoute {
                 throw new PayApiException(PayApiError.ERR_PARAM, "支付通道（" + input.getPayPassId() + "）暂不支持该api功能（" + input.getApiId() + "）");
             }
 
-            // 根据支付通道标识和apiId 获取支付api适配器
-            PayApiAdapter payApiAdapter = PayApiAdapterFactory.getInstance(input.getPayPassId(), input.getApiId());
+            // 根据支付通道标识和apiId 获取支付api策略
+            PayApiStrategy payApiStrategy = PayApiStrategyFactory.getInstance(input.getPayPassId(), input.getApiId());
 
-            result = (T) payApiAdapter.call(input);
+            result = (T) payApiStrategy.call(input);
         } catch (PayApiException e) {
             LOG.error("调用第三方支付api失败:", e.getCode() + e.getMsg());
             result = input.createResultObj();

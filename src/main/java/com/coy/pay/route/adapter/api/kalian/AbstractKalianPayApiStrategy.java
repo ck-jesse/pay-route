@@ -1,6 +1,6 @@
 package com.coy.pay.route.adapter.api.kalian;
 
-import com.coy.pay.route.adapter.api.PayApiAdapter;
+import com.coy.pay.route.adapter.api.PayApiStrategy;
 import com.coy.pay.route.adapter.dto.base.PayApiInput;
 import com.coy.pay.route.adapter.dto.base.PayApiResult;
 import com.coy.pay.route.exception.PayApiException;
@@ -14,12 +14,12 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.UUID;
 
 /**
- * 【卡联】抽象适配器
+ * 【卡联】抽象策略
  *
  * @author yehl
  * @date 2018/8/24 19:06
  */
-public abstract class AbstractKalianPayApiAdapter<T extends PayApiInput<R>, R extends PayApiResult> implements PayApiAdapter<T, R> {
+public abstract class AbstractKalianPayApiStrategy<T extends PayApiInput<R>, R extends PayApiResult> implements PayApiStrategy<T, R> {
 
     /**
      * 公众参数设置

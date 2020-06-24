@@ -13,13 +13,13 @@ import com.coy.pay.route.sdk.swiftpass.dto.SwiftpassRefundResult;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 【适配器】退款
+ * 退款
  *
  * @author chenck
  * @date 2018/8/23 14:38
  */
 @ThirdPayApiAnno(payPassId = {PayPassIdEnum.SWIFTPASS, PayPassIdEnum.SWT_CIB, PayPassIdEnum.SWT_SPDB}, apiId = CustomApiIdEnum.TRADE_REFUND)
-public class SwiftpassRefundAdapter extends AbstractSwiftpassPayApiAdapter<RefundInput, RefundResult> {
+public class SwiftpassRefundStrategy extends AbstractSwiftpassPayApiStrategy<RefundInput, RefundResult> {
 
     @Override
     public RefundResult call(RefundInput input) {

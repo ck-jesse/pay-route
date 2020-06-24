@@ -11,13 +11,13 @@ import com.coy.pay.route.sdk.hsty.dto.HstyRefundQueryResult;
 import com.coy.pay.route.sdk.hsty.support.HstyPayApiSupport;
 
 /**
- * 【适配器】【汇商通盈】退款查询
+ * 【汇商通盈】退款查询
  *
  * @author chenck
  * @date 2018/8/23 14:38
  */
 @ThirdPayApiAnno(payPassId = PayPassIdEnum.HSTYPAY, apiId = CustomApiIdEnum.TRADE_REFUND_QUERY)
-public class HstyRefundQueryAdapter extends AbstractHstyPayApiAdapter<RefundQueryInput, RefundQueryResult> {
+public class HstyRefundQueryStrategy extends AbstractHstyPayApiStrategy<RefundQueryInput, RefundQueryResult> {
 
     @Override
     public RefundQueryResult call(RefundQueryInput input) {

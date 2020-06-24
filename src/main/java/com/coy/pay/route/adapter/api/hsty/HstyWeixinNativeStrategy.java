@@ -14,13 +14,13 @@ import com.coy.pay.route.util.DateUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 【适配器】【汇商通盈】【微信】扫码支付 预支付
+ * 【汇商通盈】【微信】扫码支付 预支付
  *
  * @author chenck
  * @date 2018/8/23 14:38
  */
 @ThirdPayApiAnno(payPassId = PayPassIdEnum.HSTYPAY, apiId = CustomApiIdEnum.PAY_WEIXIN_NATIVE)
-public class HstyWeixinNativeAdapter extends AbstractHstyPayApiAdapter<WeixinNativeInput, WeixinNativeResult> {
+public class HstyWeixinNativeStrategy extends AbstractHstyPayApiStrategy<WeixinNativeInput, WeixinNativeResult> {
 
     @Override
     public WeixinNativeResult call(WeixinNativeInput input) {

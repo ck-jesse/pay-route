@@ -13,13 +13,13 @@ import com.coy.pay.route.exception.PayApiError;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 【适配器】退款
+ * 退款
  *
  * @author yehl
  * @date 2018/8/24 19:06
  */
 @ThirdPayApiAnno(payPassId = PayPassIdEnum.KALIAN, apiId = CustomApiIdEnum.TRADE_REFUND)
-public class KalianRefundAdapter extends AbstractKalianPayApiAdapter<RefundInput, RefundResult> {
+public class KalianRefundStrategy extends AbstractKalianPayApiStrategy<RefundInput, RefundResult> {
 
     @Override
     public RefundResult call(RefundInput input) {

@@ -14,13 +14,13 @@ import com.coy.pay.route.util.DateUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 【适配器】【微信】扫码支付
+ * 【微信】扫码支付
  *
  * @author yehl
  * @date 2018/8/24 18:54
  */
 @ThirdPayApiAnno(payPassId = PayPassIdEnum.KALIAN, apiId = CustomApiIdEnum.PAY_WEIXIN_NATIVE)
-public class KalianWeixinNativeAdapter extends AbstractKalianPayApiAdapter<WeixinNativeInput, WeixinNativeResult> {
+public class KalianWeixinNativeStrategy extends AbstractKalianPayApiStrategy<WeixinNativeInput, WeixinNativeResult> {
 
     @Override
     public WeixinNativeResult call(WeixinNativeInput input) {

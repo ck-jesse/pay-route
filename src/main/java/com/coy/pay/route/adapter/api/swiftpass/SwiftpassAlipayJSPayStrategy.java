@@ -9,13 +9,13 @@ import com.coy.pay.route.exception.PayApiError;
 import com.coy.pay.route.exception.PayApiException;
 
 /**
- * 【适配器】【微信】服务窗支付 预支付
+ * 【微信】服务窗支付 预支付
  *
  * @author chenck
  * @date 2018/8/23 14:38
  */
 @ThirdPayApiAnno(payPassId = {PayPassIdEnum.SWIFTPASS, PayPassIdEnum.SWT_CIB, PayPassIdEnum.SWT_SPDB}, apiId = CustomApiIdEnum.PAY_ALIPAY_JSPAY)
-public class SwiftpassAlipayJSPayAdapter extends AbstractSwiftpassPayApiAdapter<AlipayJSPayInput, AlipayJSPayResult> {
+public class SwiftpassAlipayJSPayStrategy extends AbstractSwiftpassPayApiStrategy<AlipayJSPayInput, AlipayJSPayResult> {
 
     @Override
     public AlipayJSPayResult call(AlipayJSPayInput input) {

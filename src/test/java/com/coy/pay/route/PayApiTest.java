@@ -96,7 +96,6 @@ public class PayApiTest {
     public void payQuery() {
         PayQueryInput input = new PayQueryInput();
         setCommonParam(input);
-        input.setPayPassId(payPassId);
         input.setListid(listid);
         PayQueryResult result = PayApiRoute.call(input);
         System.out.println(JSON.toJSONString(result));

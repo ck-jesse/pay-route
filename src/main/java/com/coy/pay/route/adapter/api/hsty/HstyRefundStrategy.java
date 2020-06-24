@@ -11,13 +11,13 @@ import com.coy.pay.route.adapter.type.PayPassIdEnum;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 【适配器】【汇商通盈】退款
+ * 【汇商通盈】退款
  *
  * @author chenck
  * @date 2018/8/23 14:38
  */
 @ThirdPayApiAnno(payPassId = PayPassIdEnum.HSTYPAY, apiId = CustomApiIdEnum.TRADE_REFUND)
-public class HstyRefundAdapter extends AbstractHstyPayApiAdapter<RefundInput, RefundResult> {
+public class HstyRefundStrategy extends AbstractHstyPayApiStrategy<RefundInput, RefundResult> {
 
     @Override
     public RefundResult call(RefundInput input) {
