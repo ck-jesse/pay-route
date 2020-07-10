@@ -14,7 +14,6 @@
 #### 软件架构
 
 ![1阶段四](img/1阶段四.png)
-https://raw.githubusercontent.com/ckcoy/pay-route/master/img/1%E9%98%B6%E6%AE%B5%E5%9B%9B.png
 
 1、支付路由
 
