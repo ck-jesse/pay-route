@@ -114,9 +114,9 @@ public void weixinJSPay() {
     input.setTimeStart(calendar.getTime());
     calendar.add(Calendar.MINUTE, 30);
     input.setTimeExpire(calendar.getTime());
-    input.setOpenid("ofDK05O8FrzOEw91-_MBMuRRUKK0");
-    input.setSubOpenid("ofDK05O8FrzOEw91-_MBMuRRUKK0");
-    input.setSubAppid("wx6edbb4aa778ac786");// 汇商通盈
+    input.setOpenid("ofDK05O8FrzOEw91-_MBMuR00000");
+    input.setSubOpenid("ofDK05O8FrzOEw91-_MBMuR00000");
+    input.setSubAppid("wx6edbb4aa77800000");
 
     WeixinJSPayResult result = PayApiRoute.call(input);
     System.out.println(JSON.toJSONString(result));
